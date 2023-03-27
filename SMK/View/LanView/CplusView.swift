@@ -11,7 +11,7 @@ struct CplusView: View {
     var body: some View {
         NavigationStack {
             List {
-                NavigationLink("C++란") {
+                NavigationLink("C++이란") {
                     AboutCplusplus()
                 }
                 NavigationLink("C++ 특징") {
@@ -19,6 +19,9 @@ struct CplusView: View {
                 }
                 NavigationLink("템플릿") {
                     TemplateCplus()
+                }
+                NavigationLink("C++는 어디에 사용되나요?") {
+                    WeherCplusplus()
                 }
             }
             .navigationTitle("C++")
@@ -39,7 +42,7 @@ struct AboutCplusplus: View {
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)
                     .padding()
-                    .offset(y: -150)
+//                    .offset(y: -150)
                 }
             }
             .navigationTitle("C++란")
@@ -60,7 +63,7 @@ struct ImpactCplusplus: View {
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)
                     .padding()
-                    .offset(y: -150)
+//                    .offset(y: -150)
                 }
             }
             .navigationTitle("C++ 특징")
@@ -88,10 +91,34 @@ struct TemplateCplus: View {
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)
                     .padding()
-                    .offset(y: -150)
+//                    .offset(y: -150)
                 }
             }
             .navigationTitle("템플릿")
+        }
+    }
+}
+
+struct WeherCplusplus: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Text("""
+                         C++ 또한 C언어와 마찬가지로 하드웨어와 가깝고 리소스를 쉽게 조작 할 수 있으며 CPU 직얍적 기능에 대한 절차적 프로그래밍을 제공하고
+                         속도또한 빠릅니다.
+                         
+                         C++의 이런 장점은 다양한 분야에서 사용되어집니다.
+                         게임, GUI 기반 Application (Adobe 등), 데이터 베이스, OS, Firefox, Maya 3D, 클라우드 분산 시스템 등
+                         많은 곳에서 활용되고있습니다.
+                         """)
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(1)
+                    .padding()
+//                    .offset(y: -150)
+                }
+            }
+            .navigationTitle("C++의 사용")
         }
     }
 }

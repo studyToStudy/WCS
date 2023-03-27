@@ -58,9 +58,9 @@ struct WhereUseView: View {
                          임베디드, 컴파일러, 게임 및 애니메이션, 데이터 베이스 등 다양한 곳에서 활용할 수 있습니다.
                          """)
                     .multilineTextAlignment(.leading)
-                    .lineSpacing(1)
                     .padding()
-                    .offset(y: -150)
+                    .lineSpacing(1)
+//                    .offset(y: )
                 }
             }
             .navigationTitle("C언어의 사용")
@@ -124,7 +124,7 @@ struct PointerView: View {
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)
                     .padding()
-                    .offset(y: -150)
+                    
                 }
             }
             .navigationTitle("포인터")
@@ -139,7 +139,5 @@ struct CView_Previews: PreviewProvider {
 //        AboutC()
 //        CdataStructure()
 //        AboutCView()
-//        VariableView()
-//        ConstantView()
     }
 }
