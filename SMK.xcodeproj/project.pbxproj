@@ -11,6 +11,19 @@
 		DB51CD9C29D11C400068F5E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CD9B29D11C400068F5E2 /* ContentView.swift */; };
 		DB51CD9E29D11C420068F5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51CD9D29D11C420068F5E2 /* Assets.xcassets */; };
 		DB51CDA129D11C420068F5E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51CDA029D11C420068F5E2 /* Preview Assets.xcassets */; };
+		DB51CDAA29D11CD90068F5E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDA929D11CD90068F5E2 /* HomeView.swift */; };
+		DB51CDAC29D11CFE0068F5E2 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDAB29D11CFE0068F5E2 /* TopBarView.swift */; };
+		DB51CDAE29D11D280068F5E2 /* AlgorithmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDAD29D11D280068F5E2 /* AlgorithmView.swift */; };
+		DB51CDB029D11DB20068F5E2 /* DataStructureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDAF29D11DB20068F5E2 /* DataStructureView.swift */; };
+		DB51CDB229D11E210068F5E2 /* DesignPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */; };
+		DB51CDB429D1220B0068F5E2 /* ProgramLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB329D1220B0068F5E2 /* ProgramLang.swift */; };
+		DB51CDB729D126030068F5E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB629D126030068F5E2 /* Card.swift */; };
+		DB51CDB929D148D80068F5E2 /* CView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB829D148D80068F5E2 /* CView.swift */; };
+		DB51CDBC29D154DA0068F5E2 /* CplusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDBB29D154DA0068F5E2 /* CplusView.swift */; };
+		DB51CDBE29D154EC0068F5E2 /* C#View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDBD29D154EC0068F5E2 /* C#View.swift */; };
+		DB51CDC029D155130068F5E2 /* PythonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDBF29D155130068F5E2 /* PythonView.swift */; };
+		DB51CDC229D155460068F5E2 /* JavaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC129D155460068F5E2 /* JavaView.swift */; };
+		DB51CDC529D155660068F5E2 /* JavascriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC429D155660068F5E2 /* JavascriptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,19 @@
 		DB51CD9B29D11C400068F5E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB51CD9D29D11C420068F5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB51CDA029D11C420068F5E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB51CDA929D11CD90068F5E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DB51CDAB29D11CFE0068F5E2 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		DB51CDAD29D11D280068F5E2 /* AlgorithmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmView.swift; sourceTree = "<group>"; };
+		DB51CDAF29D11DB20068F5E2 /* DataStructureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureView.swift; sourceTree = "<group>"; };
+		DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternView.swift; sourceTree = "<group>"; };
+		DB51CDB329D1220B0068F5E2 /* ProgramLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramLang.swift; sourceTree = "<group>"; };
+		DB51CDB629D126030068F5E2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DB51CDB829D148D80068F5E2 /* CView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CView.swift; sourceTree = "<group>"; };
+		DB51CDBB29D154DA0068F5E2 /* CplusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CplusView.swift; sourceTree = "<group>"; };
+		DB51CDBD29D154EC0068F5E2 /* C#View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "C#View.swift"; sourceTree = "<group>"; };
+		DB51CDBF29D155130068F5E2 /* PythonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonView.swift; sourceTree = "<group>"; };
+		DB51CDC129D155460068F5E2 /* JavaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaView.swift; sourceTree = "<group>"; };
+		DB51CDC429D155660068F5E2 /* JavascriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavascriptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +77,10 @@
 		DB51CD9829D11C400068F5E2 /* SMK */ = {
 			isa = PBXGroup;
 			children = (
+				DB51CDB529D125D90068F5E2 /* Components */,
+				DB51CDA829D11CC80068F5E2 /* View */,
+				DB51CDA729D11CB90068F5E2 /* Model */,
 				DB51CD9929D11C400068F5E2 /* SMKApp.swift */,
-				DB51CD9B29D11C400068F5E2 /* ContentView.swift */,
 				DB51CD9D29D11C420068F5E2 /* Assets.xcassets */,
 				DB51CD9F29D11C420068F5E2 /* Preview Content */,
 			);
@@ -65,6 +93,49 @@
 				DB51CDA029D11C420068F5E2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB51CDA729D11CB90068F5E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB51CDB329D1220B0068F5E2 /* ProgramLang.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB51CDA829D11CC80068F5E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB51CDBA29D154AA0068F5E2 /* LanView */,
+				DB51CD9B29D11C400068F5E2 /* ContentView.swift */,
+				DB51CDA929D11CD90068F5E2 /* HomeView.swift */,
+				DB51CDAB29D11CFE0068F5E2 /* TopBarView.swift */,
+				DB51CDAD29D11D280068F5E2 /* AlgorithmView.swift */,
+				DB51CDAF29D11DB20068F5E2 /* DataStructureView.swift */,
+				DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB51CDB529D125D90068F5E2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DB51CDB629D126030068F5E2 /* Card.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DB51CDBA29D154AA0068F5E2 /* LanView */ = {
+			isa = PBXGroup;
+			children = (
+				DB51CDB829D148D80068F5E2 /* CView.swift */,
+				DB51CDBD29D154EC0068F5E2 /* C#View.swift */,
+				DB51CDBB29D154DA0068F5E2 /* CplusView.swift */,
+				DB51CDBF29D155130068F5E2 /* PythonView.swift */,
+				DB51CDC129D155460068F5E2 /* JavaView.swift */,
+				DB51CDC429D155660068F5E2 /* JavascriptView.swift */,
+			);
+			path = LanView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +208,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB51CDB229D11E210068F5E2 /* DesignPatternView.swift in Sources */,
+				DB51CDB729D126030068F5E2 /* Card.swift in Sources */,
+				DB51CDAA29D11CD90068F5E2 /* HomeView.swift in Sources */,
 				DB51CD9C29D11C400068F5E2 /* ContentView.swift in Sources */,
+				DB51CDC229D155460068F5E2 /* JavaView.swift in Sources */,
+				DB51CDBE29D154EC0068F5E2 /* C#View.swift in Sources */,
+				DB51CDC529D155660068F5E2 /* JavascriptView.swift in Sources */,
+				DB51CDAC29D11CFE0068F5E2 /* TopBarView.swift in Sources */,
+				DB51CDC029D155130068F5E2 /* PythonView.swift in Sources */,
+				DB51CDAE29D11D280068F5E2 /* AlgorithmView.swift in Sources */,
+				DB51CDB029D11DB20068F5E2 /* DataStructureView.swift in Sources */,
+				DB51CDB429D1220B0068F5E2 /* ProgramLang.swift in Sources */,
+				DB51CDB929D148D80068F5E2 /* CView.swift in Sources */,
 				DB51CD9A29D11C400068F5E2 /* SMKApp.swift in Sources */,
+				DB51CDBC29D154DA0068F5E2 /* CplusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

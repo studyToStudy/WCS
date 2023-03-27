@@ -9,7 +9,55 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                ScrollView(.vertical, showsIndicators: false) {
+                    HStack {
+                        NavigationLink(destination: CView()) {
+                            Card(cardItem: programLanguage[0])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                        
+                        NavigationLink(destination: PythonView()) {
+                            Card(cardItem: programLanguage[1])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                    }
+                    
+                    
+                    HStack {
+                        NavigationLink(destination: CplusView()) {
+                            Card(cardItem: programLanguage[2])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                        
+                        NavigationLink(destination: C_View()) {
+                            Card(cardItem: programLanguage[3])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                    }
+                    
+                    HStack {
+                        NavigationLink(destination: JavaView()) {
+                            Card(cardItem: programLanguage[4])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                        
+                        NavigationLink(destination: JavascriptView()) {
+                            Card(cardItem: programLanguage[5])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
+            .navigationTitle("세상의 모든 코딩지식")
+        }
     }
 }
 
