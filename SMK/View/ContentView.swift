@@ -15,11 +15,13 @@ struct ContentView: View {
                     Image(systemName: "cpu.fill")
                         .foregroundColor(.red)
                     Text("Lang")
+                        .tag(1)
                 }
             TopBarView()
                 .tabItem {
                     Image(systemName: "2.square.fill")
                     Text("Algorythm")
+                        .tag(0)
                 }
         }
         .toolbarColorScheme(.dark, for: .tabBar)

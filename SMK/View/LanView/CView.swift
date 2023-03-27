@@ -17,14 +17,11 @@ struct CView: View {
                 NavigationLink("C언어의 특징") {
                     AboutCView()
                 }
-                NavigationLink("자료형") {
-                    CdataStructure()
+                NavigationLink("C언어는 어디에 사용되나요?") {
+                    WhereUseView()
                 }
-                NavigationLink("변수") {
-                    VariableView()
-                }
-                NavigationLink("상수") {
-                    ConstantView()
+                NavigationLink("포인터") {
+                    PointerView()
                 }
             }
             .navigationTitle("C")
@@ -50,31 +47,15 @@ struct AboutC: View {
     }
 }
 
-struct CdataStructure: View {
+struct WhereUseView: View {
     var body: some View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    VStack {
-                        Image("c-char")
-                            .resizable()
-                            .aspectRatio(1, contentMode: .fit)
-                            .frame(width: 380, height: 380)
-                        Image("c-char2")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 380, height: 380)
-                    }
                     Text("""
-                         char는 정수와 문자를 표시할 때 사용되고,
-                         short, int, long, long long은 정수, 즉 숫자를 나타낼 때 사용됩니다.
-                         각각의 차이점은 "조금 더 크거나 조금 더 작은 숫자를 표시할 수 있다"입니다.
-                         
-                         정수형의 경우 signed(부호 있는 변수), unsigned(부호 없는 변수)로 나뉘어 지는데 signed의 경우에는
-                         음수와 양수 둘 다 표현이 가능하고, unsigned의 경우 양수만을 표현할 수 있는 대신 범위가 약 2배 정도 넓습니다.
-                         
-                         실수형은 float, double, long double 순으로 조금 더 큰 숫자, 많은 소수점을 나타낼 수 있으며,
-                         정수형과 달리 unsigned이 존재하지 않습니다.
+                         C는 운영체제(OS) 개발을 위해 탄생한 언어입니다. 따라서 하드웨어를 제어하고 실행 효율을 높혀야 하는 곳에 주로 사용됩니다.
+                         대표적으로 특정 하드웨어에 최적화된 기능이 필요한 임베디드 프로그래밍에 가장 많이 쓰입니다.
+                         임베디드, 컴파일러, 게임 및 애니메이션, 데이터 베이스 등 다양한 곳에서 활용할 수 있습니다.
                          """)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)
@@ -82,7 +63,7 @@ struct CdataStructure: View {
                     .offset(y: -150)
                 }
             }
-            .navigationTitle("자료형")
+            .navigationTitle("C언어의 사용")
         }
     }
 }
@@ -117,74 +98,39 @@ struct AboutCView: View {
     }
 }
 
-struct VariableView: View {
+struct PointerView: View {
     var body: some View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    VStack {
-                        Text("""
-                            C언어에서는 변수의 이름을 비교적 자유롭게 지을 수 있습니다.
-                            하지만 변수의 이름은 해당 변수에 저장될 데이터의 의미를 가장 잘 나타내는 것이 좋습니다.
-                            
-                            변수를 생성할때 지켜야 하는 규칙은 다음과 같습니다.
-                            
-                            1. 변수의 이름은 영문자(대소문자), 숫자, 언더스코어(_)로만 구성됩니다.
-                            2. 변수의 이름 사이에는 공백을 포함할 수 없습니다.
-                            3. 변수의 이름으로 C언어에서 미리 정의된 키워드(예약어)는 사용할 수 없습니다.
-                            
-                            변수(Variable)란 데이터를 저장히기 위해 프로그램에 의해 이름을 할당받은 메모리 공간을 의미합니다.
-                            즉, 변수란 데이터를 저장할 수 있는 메모리 공간이며, 이렇게 저장된 값은 변경할 수 있습니다.
-                            
-                            숫자와 관련된 변수는 정수형 변수와 실수형 변수로 구분되고, 정수형 변수는 char형, int형, long형 변수로, 실수형 변수는 float형, double형 변수로 나눌 수 있습니다.
-                            
-                            그라고 데이터가 저장된 메모리의 주소를 저장하고 처리하는 포인터 변수가 있습니다.
-                            """)
-                        .multilineTextAlignment(.leading)
-                        .lineSpacing(1)
-                        .padding()
-                    }
+                    Text("""
+                         데이터의 주소값이란 해당 데이터가 저장된 메모리의 시작 주소를 의미합니다.
+                         C언어에서는 이러한 주소값을 1바이트 크기의 메모리 공간으로 나누어 표현합니다.
+                         예를 들어, int형 데이터는 4바이트의 크기를 가지지만, int형 데이터의 주소값은 시작 주소 1바이트만을 가리킵니다.
+                         
+                         포인터는 메모리의 주소값을 저장하는 변수이며, 포인터 변수라고도 부릅니다.
+                         포인터와 연관되어 사용되는 연산자는 주소 연산자(&)와 참조 연산자(*)가 있습니다.
+                         
+                         주소 연산자(&)는 변수 이름 앞에 사용하여, 해당 변수의 주소값을 반환합니다.
+                         '&'는 앰퍼샌드라고 부르며, 번지 연산자라고도 부릅니다.
+                         
+                         참조연산자(*)는 포인터의 이름이나 주소 앞에 사용하여, 포인터에 가리키는 주소에 저장된 값을 반환합니다.
+                         
+                         포인터 선언시, 타입과 포인터이름이 필요하며 타입이란 포인터가 가리키고자 하는 변수의 타입을 명시합니다.
+                         포인터 이름은 포인터가 선언된 후에 포인터가 접근하기 위해 사용됩니다.
+                         
+                         의도치 않은 메모리의 값 변경을 방지하기 위해 포인터 선언후 참조 연산자(*)를 사용하여 반드시 먼저 초기화되어야 합니다.
+                         """)
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(1)
+                    .padding()
+                    .offset(y: -150)
                 }
             }
-            .navigationTitle("변수")
+            .navigationTitle("포인터")
         }
     }
 }
-
-struct ConstantView: View {
-    var body: some View {
-        NavigationStack {
-            VStack {
-                ScrollView {
-                    VStack {
-                        Text("""
-                            상수(Constant)란 변수와 마찬가지로 데이터를 저장할 수 있는 메모리 공간을 의미합니다.
-                            하지만 상수가 변수와 다른 점은 프로그램이 실행되는 동안 상수에 저장된 데이터는 변경할 수 없다는 점 입니다.
-                            
-                            상수는 표현 방식에 따라 다음과 같이 나눌 수 있습니다.
-                            1. 리터럴 상수(literal constant)
-                            2. 심볼릭 상수(symbolic constant)
-                            """)
-                        .multilineTextAlignment(.leading)
-                        .lineSpacing(1)
-                        .padding()
-                        
-                        Text("리터럴 상수")
-                            .bold()
-                            .frame(alignment: .leading)
-                            Text("""
-                                 1. 정수형 리터럴 상수는 123, -456과 같이 아라비아 숫자와 부호로 직접 표현됩니다.
-                                 2. 실수형 리터럴 상수는 3.14, -45.6과 같이 소수 부분을 가지는 아라비아 숫자로 표현됩니다.
-                                 3. 문자형 리터럴 상수는 'a', 'Z'와 같이 따옴표('')로 감싸진 문자로 표현됩니다.
-                                 """)
-                    }
-                }
-            }
-            .navigationTitle("상수")
-        }
-    }
-}
-
 
 
 struct CView_Previews: PreviewProvider {

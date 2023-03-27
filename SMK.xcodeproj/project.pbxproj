@@ -24,6 +24,8 @@
 		DB51CDC029D155130068F5E2 /* PythonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDBF29D155130068F5E2 /* PythonView.swift */; };
 		DB51CDC229D155460068F5E2 /* JavaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC129D155460068F5E2 /* JavaView.swift */; };
 		DB51CDC529D155660068F5E2 /* JavascriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC429D155660068F5E2 /* JavascriptView.swift */; };
+		DB51CDC729D1D8AA0068F5E2 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */; };
+		DB51CDCB29D1DB5C0068F5E2 /* DataTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		DB51CDBF29D155130068F5E2 /* PythonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonView.swift; sourceTree = "<group>"; };
 		DB51CDC129D155460068F5E2 /* JavaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaView.swift; sourceTree = "<group>"; };
 		DB51CDC429D155660068F5E2 /* JavascriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavascriptView.swift; sourceTree = "<group>"; };
+		DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		DB51CDBA29D154AA0068F5E2 /* LanView */ = {
 			isa = PBXGroup;
 			children = (
+				DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */,
+				DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */,
 				DB51CDB829D148D80068F5E2 /* CView.swift */,
 				DB51CDBD29D154EC0068F5E2 /* C#View.swift */,
 				DB51CDBB29D154DA0068F5E2 /* CplusView.swift */,
@@ -214,6 +220,7 @@
 				DB51CD9C29D11C400068F5E2 /* ContentView.swift in Sources */,
 				DB51CDC229D155460068F5E2 /* JavaView.swift in Sources */,
 				DB51CDBE29D154EC0068F5E2 /* C#View.swift in Sources */,
+				DB51CDCB29D1DB5C0068F5E2 /* DataTypeView.swift in Sources */,
 				DB51CDC529D155660068F5E2 /* JavascriptView.swift in Sources */,
 				DB51CDAC29D11CFE0068F5E2 /* TopBarView.swift in Sources */,
 				DB51CDC029D155130068F5E2 /* PythonView.swift in Sources */,
@@ -223,6 +230,7 @@
 				DB51CDB929D148D80068F5E2 /* CView.swift in Sources */,
 				DB51CD9A29D11C400068F5E2 /* SMKApp.swift in Sources */,
 				DB51CDBC29D154DA0068F5E2 /* CplusView.swift in Sources */,
+				DB51CDC729D1D8AA0068F5E2 /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

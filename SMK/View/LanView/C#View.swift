@@ -9,9 +9,15 @@ import SwiftUI
 
 struct C_View: View {
     var body: some View {
-        Text("c#")
+        NavigationStack {
+            List {
+                Text("C#")
+            }
+            .navigationTitle("C#")
+        }
     }
 }
+
 
 struct C_View_Previews: PreviewProvider {
     static var previews: some View {
