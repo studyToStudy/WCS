@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import CodeEditor
 
 struct C_View: View {
     var body: some View {
         NavigationStack {
             List {
+                NavigationLink("Hello World!") {
+                    CSharpHello()
+                }
                 NavigationLink("C#이란") {
                     AboutCsharp()
                 }
@@ -20,10 +24,59 @@ struct C_View: View {
                 NavigationLink(".NET Core") {
                     DotNetView()
                 }
+                NavigationLink("C#은 어디에 사용되나요?") {
+                    UseCsharp()
+                }
             }
             .navigationTitle("C#")
         }
     }
+}
+
+struct CSharpHello: View {
+  #if os(macOS)
+    @AppStorage("fontsize") var fontSize = Int(NSFont.systemFontSize)
+  #endif
+  @State private var source = """
+                                // C# 10.0
+                                Console.WriteLine("Hello, world!");
+                                """
+    @State private var language = CodeEditor.Language.cs
+  @State private var theme    = CodeEditor.ThemeName.ocean
+
+  var body: some View {
+      NavigationStack {
+          VStack(spacing: 0) {
+            HStack {
+              Picker("Language", selection: $language) {
+                ForEach(CodeEditor.availableLanguages) { language in
+                  Text("\(language.rawValue.capitalized)")
+                    .tag(language)
+                }
+              }
+              Picker("Theme", selection: $theme) {
+                ForEach(CodeEditor.availableThemes) { theme in
+                  Text("\(theme.rawValue.capitalized)")
+                    .tag(theme)
+                }
+              }
+            }
+            .padding()
+          
+            Divider()
+          
+            #if os(macOS)
+              CodeEditor(source: $source, language: language, theme: theme,
+                         fontSize: .init(get: { CGFloat(fontSize)  },
+                                         set: { fontSize = Int($0) }))
+                .frame(minWidth: 640, minHeight: 480)
+            #else
+              CodeEditor(source: $source, language: language, theme: theme)
+            #endif
+          }
+          .navigationTitle("Hello World!")
+      }
+  }
 }
 
 struct AboutCsharp: View {
@@ -117,8 +170,31 @@ struct DotNetView: View {
     }
 }
 
+struct UseCsharp: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Text("""
+                         C#은 GUI, ASP .NET의 웹 개발 그리고 게임 개발에 사용되어집니다.
+                         
+                         게임 클라이언트 및 서버 개발에 사용되며 Uinty 엔진의 개발 언어이기도 합니다.
+                         (런타임 C++, 스크립팅 C#)
+                         """)
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(1)
+                    .padding()
+//                    .offset(y: -150)
+                }
+            }
+            .navigationTitle("C#은 어디에 사용되나요?")
+        }
+    }
+}
+
 struct C_View_Previews: PreviewProvider {
     static var previews: some View {
         C_View()
+//        CSharpHello()
     }
 }

@@ -26,6 +26,7 @@
 		DB51CDC529D155660068F5E2 /* JavascriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC429D155660068F5E2 /* JavascriptView.swift */; };
 		DB51CDC729D1D8AA0068F5E2 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */; };
 		DB51CDCB29D1DB5C0068F5E2 /* DataTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */; };
+		DB51CDCE29D2AAE30068F5E2 /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = DB51CDCD29D2AAE30068F5E2 /* CodeEditor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB51CDCE29D2AAE30068F5E2 /* CodeEditor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +139,8 @@
 				DB51CDB829D148D80068F5E2 /* CView.swift */,
 				DB51CDBB29D154DA0068F5E2 /* CplusView.swift */,
 				DB51CDBD29D154EC0068F5E2 /* C#View.swift */,
-				DB51CDBF29D155130068F5E2 /* PythonView.swift */,
 				DB51CDC129D155460068F5E2 /* JavaView.swift */,
+				DB51CDBF29D155130068F5E2 /* PythonView.swift */,
 				DB51CDC429D155660068F5E2 /* JavascriptView.swift */,
 			);
 			path = LanView;
@@ -160,6 +162,9 @@
 			dependencies = (
 			);
 			name = SMK;
+			packageProductDependencies = (
+				DB51CDCD29D2AAE30068F5E2 /* CodeEditor */,
+			);
 			productName = SMK;
 			productReference = DB51CD9629D11C400068F5E2 /* SMK.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +193,9 @@
 				Base,
 			);
 			mainGroup = DB51CD8D29D11C400068F5E2;
+			packageReferences = (
+				DB51CDCC29D2AAE30068F5E2 /* XCRemoteSwiftPackageReference "CodeEditor" */,
+			);
 			productRefGroup = DB51CD9729D11C400068F5E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -431,6 +439,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB51CDCC29D2AAE30068F5E2 /* XCRemoteSwiftPackageReference "CodeEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZeeZide/CodeEditor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB51CDCD29D2AAE30068F5E2 /* CodeEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB51CDCC29D2AAE30068F5E2 /* XCRemoteSwiftPackageReference "CodeEditor" */;
+			productName = CodeEditor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB51CD8E29D11C400068F5E2 /* Project object */;
 }

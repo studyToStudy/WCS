@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import CodeEditor
 
 struct CplusView: View {
     var body: some View {
         NavigationStack {
             List {
+                NavigationLink("Hello World!") {
+                    CPlusHello()
+                }
                 NavigationLink("C++이란") {
                     AboutCplusplus()
                 }
@@ -27,6 +31,55 @@ struct CplusView: View {
             .navigationTitle("C++")
         }
     }
+}
+
+struct CPlusHello: View {
+  #if os(macOS)
+    @AppStorage("fontsize") var fontSize = Int(NSFont.systemFontSize)
+  #endif
+  @State private var source = """
+                                #include <iostream>
+                                
+                                int main() {
+                                    std::cout << "Hello World!";
+                                }
+                                """
+  @State private var language = CodeEditor.Language.cpp
+  @State private var theme    = CodeEditor.ThemeName.ocean
+
+  var body: some View {
+      NavigationStack {
+          VStack(spacing: 0) {
+            HStack {
+              Picker("Language", selection: $language) {
+                ForEach(CodeEditor.availableLanguages) { language in
+                  Text("\(language.rawValue.capitalized)")
+                    .tag(language)
+                }
+              }
+              Picker("Theme", selection: $theme) {
+                ForEach(CodeEditor.availableThemes) { theme in
+                  Text("\(theme.rawValue.capitalized)")
+                    .tag(theme)
+                }
+              }
+            }
+            .padding()
+          
+            Divider()
+          
+            #if os(macOS)
+              CodeEditor(source: $source, language: language, theme: theme,
+                         fontSize: .init(get: { CGFloat(fontSize)  },
+                                         set: { fontSize = Int($0) }))
+                .frame(minWidth: 640, minHeight: 480)
+            #else
+              CodeEditor(source: $source, language: language, theme: theme)
+            #endif
+          }
+          .navigationTitle("Hello World!")
+      }
+  }
 }
 
 struct AboutCplusplus: View {

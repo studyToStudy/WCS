@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import CodeEditor
 
 struct CView: View {
     var body: some View {
         NavigationStack {
             List {
+                NavigationLink("Hello World!") {
+                    CHello()
+                }
                 NavigationLink("C언어란") {
                     AboutC()
                 }
@@ -29,19 +33,71 @@ struct CView: View {
     }
 }
 
+struct CHello: View {
+  #if os(macOS)
+    @AppStorage("fontsize") var fontSize = Int(NSFont.systemFontSize)
+  #endif
+  @State private var source = """
+                                #include <stdio.h>
+                                
+                                int main() {
+                                    printf("Hello World!");
+                                
+                                    return 0
+                                }
+                                """
+  @State private var language = CodeEditor.Language.c
+  @State private var theme    = CodeEditor.ThemeName.ocean
+
+  var body: some View {
+      NavigationStack {
+          VStack(spacing: 0) {
+            HStack {
+              Picker("Language", selection: $language) {
+                ForEach(CodeEditor.availableLanguages) { language in
+                  Text("\(language.rawValue.capitalized)")
+                    .tag(language)
+                }
+              }
+              Picker("Theme", selection: $theme) {
+                ForEach(CodeEditor.availableThemes) { theme in
+                  Text("\(theme.rawValue.capitalized)")
+                    .tag(theme)
+                }
+              }
+            }
+            .padding()
+          
+            Divider()
+          
+            #if os(macOS)
+              CodeEditor(source: $source, language: language, theme: theme,
+                         fontSize: .init(get: { CGFloat(fontSize)  },
+                                         set: { fontSize = Int($0) }))
+                .frame(minWidth: 640, minHeight: 480)
+            #else
+              CodeEditor(source: $source, language: language, theme: theme)
+            #endif
+          }
+          .navigationTitle("Hello World!")
+      }
+  }
+}
 
 struct AboutC: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("""
-                     C언어는 1972년 데니스 리치와 켄 톰슨이 만든 프로그래밍 언어로서, 세계적으로 많이 쓰이는 프로그래밍 언어 중 하나입니다.
-                     
-                     C는 UNIX 운영체제의 개발을 위해 탄생되었으며, 현재까지도 운영체제 또는 운영체제 기반의 응용 프로그램을 개발할때 사용되는 효율성이 높은 프로그래밍 언어이며, 임베디드시스템 소프트웨어 분야, 모바일 분야, 자율 컴퓨팅 분야에도 널리 사용되고 있습니다.
-                     """)
-                .padding()
-                .offset(y: -200)
-            }
+                ScrollView {
+                    Text("""
+                         C언어는 1972년 데니스 리치와 켄 톰슨이 만든 프로그래밍 언어로서, 세계적으로 많이 쓰이는 프로그래밍 언어 중 하나입니다.
+                         
+                         C는 UNIX 운영체제의 개발을 위해 탄생되었으며, 현재까지도 운영체제 또는 운영체제 기반의 응용 프로그램을 개발할때 사용되는 효율성이 높은 프로그래밍 언어이며, 임베디드시스템 소프트웨어 분야, 모바일 분야, 자율 컴퓨팅 분야에도 널리 사용되고 있습니다.
+                         """)
+                    .padding()
+//                    .offset(y: -200)
+                }
+                }
             .navigationTitle("C언어란")
         }
     }
@@ -136,6 +192,7 @@ struct PointerView: View {
 struct CView_Previews: PreviewProvider {
     static var previews: some View {
         CView()
+//        CHello()
 //        AboutC()
 //        CdataStructure()
 //        AboutCView()
