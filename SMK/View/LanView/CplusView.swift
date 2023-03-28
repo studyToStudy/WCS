@@ -91,6 +91,8 @@ struct AboutCplusplus: View {
                          C++는 기존 C언어에 여러가지 기능을 추가하여 만든 프로그래밍 언어입니다.
                          C++은 C언어에서 절차 지향적 언어의 특징을 가져왔을 뿐 아니라, 클래스를 사용하는 객체 지향적 언어인 동시에 템플릿으로 대변되는
                          일반화 프로그래밍 방식의 언어이기도 합니다.
+                         
+                         파일 확장자는 .cpp
                          """)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)

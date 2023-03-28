@@ -93,6 +93,8 @@ struct AboutCsharp: View {
                          
                          C#의 기본 자료형은 닷넷의 객체 모델을 따르고 있고, 런타임 차원에서 가비지 컬렉터가 실행되며 또한 클래스, 인터페이스, 예외와 같이
                          객체 지향 언어로서 가져야 할 모든 요소들이 포함되어 있습니다.
+                         
+                         파일 확장자는 .cs
                          """)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)

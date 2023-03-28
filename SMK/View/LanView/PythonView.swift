@@ -25,7 +25,7 @@ struct PythonView: View {
                     WritePythonView()
                 }
                 NavigationLink("장점과 단점") {
-                    GoodAndLustsView()
+                    GoodAndBadView()
                 }
                 NavigationLink("수학관련 라이브러리") {
                     MathPython()
@@ -37,7 +37,7 @@ struct PythonView: View {
                     ChatGPTPython()
                 }
             }
-            .navigationTitle("Python이란")
+            .navigationTitle("Python")
         }
     }
 }
@@ -206,22 +206,25 @@ struct WritePythonView: View {
     }
 }
 
-struct GoodAndLustsView: View {
+struct GoodAndBadView: View {
     var body: some View {
         NavigationStack {
             VStack {
                 ScrollView {
                     Text("""
-                         장점
+                         Python의 장점
+                         
                          1. 신속한 개발 속도
                          2. 용이한 피드백
                          3. 과학 및 공학 친화성
                          4. 거대한 생태계
                          5. 교육의 편의성
                          
-                         단점
+                         Python 단점
+                         
                          1. 비교적 저속의 실행속도
                          2. 배포 과정의 복잡함
+                         
                          """)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(1)

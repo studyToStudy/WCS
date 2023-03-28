@@ -27,6 +27,7 @@
 		DB51CDC729D1D8AA0068F5E2 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */; };
 		DB51CDCB29D1DB5C0068F5E2 /* DataTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */; };
 		DB51CDCE29D2AAE30068F5E2 /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = DB51CDCD29D2AAE30068F5E2 /* CodeEditor */; };
+		DB51CDD029D3368B0068F5E2 /* RustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCF29D3368B0068F5E2 /* RustView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DB51CDC429D155660068F5E2 /* JavascriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavascriptView.swift; sourceTree = "<group>"; };
 		DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeView.swift; sourceTree = "<group>"; };
+		DB51CDCF29D3368B0068F5E2 /* RustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +114,11 @@
 		DB51CDA829D11CC80068F5E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB51CDD129D345FA0068F5E2 /* AlgoView */,
 				DB51CDBA29D154AA0068F5E2 /* LanView */,
 				DB51CD9B29D11C400068F5E2 /* ContentView.swift */,
 				DB51CDA929D11CD90068F5E2 /* HomeView.swift */,
 				DB51CDAB29D11CFE0068F5E2 /* TopBarView.swift */,
-				DB51CDAD29D11D280068F5E2 /* AlgorithmView.swift */,
-				DB51CDAF29D11DB20068F5E2 /* DataStructureView.swift */,
-				DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,8 +142,19 @@
 				DB51CDC129D155460068F5E2 /* JavaView.swift */,
 				DB51CDBF29D155130068F5E2 /* PythonView.swift */,
 				DB51CDC429D155660068F5E2 /* JavascriptView.swift */,
+				DB51CDCF29D3368B0068F5E2 /* RustView.swift */,
 			);
 			path = LanView;
+			sourceTree = "<group>";
+		};
+		DB51CDD129D345FA0068F5E2 /* AlgoView */ = {
+			isa = PBXGroup;
+			children = (
+				DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */,
+				DB51CDAD29D11D280068F5E2 /* AlgorithmView.swift */,
+				DB51CDAF29D11DB20068F5E2 /* DataStructureView.swift */,
+			);
+			path = AlgoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 				DB51CDB929D148D80068F5E2 /* CView.swift in Sources */,
 				DB51CD9A29D11C400068F5E2 /* SMKApp.swift in Sources */,
 				DB51CDBC29D154DA0068F5E2 /* CplusView.swift in Sources */,
+				DB51CDD029D3368B0068F5E2 /* RustView.swift in Sources */,
 				DB51CDC729D1D8AA0068F5E2 /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

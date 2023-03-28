@@ -23,4 +23,5 @@ var programLanguage = [
     ProgramLang(image: "Java", title: "Java", subTitle: "자바"),
     ProgramLang(image: "js", title: "JavaScript", subTitle: "자바스크립트"),
     ProgramLang(image: "code", title: "프로그래밍 공통", subTitle: "프로그래밍"),
+    ProgramLang(image: "Rust", title: "Rust", subTitle: "러스트"),
 ]

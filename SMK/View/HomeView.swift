@@ -56,11 +56,19 @@ struct HomeView: View {
                         .shadow(radius: 6)
                         .buttonStyle(.plain)
                     }
-                    NavigationLink(destination: PythonView()) {
-                        Card(cardItem: programLanguage[1])
+                    HStack {
+                        NavigationLink(destination: PythonView()) {
+                            Card(cardItem: programLanguage[1])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
+                        
+                        NavigationLink(destination: RustView()) {
+                            Card(cardItem: programLanguage[7])
+                        }
+                        .shadow(radius: 6)
+                        .buttonStyle(.plain)
                     }
-                    .shadow(radius: 6)
-                    .buttonStyle(.plain)
 
                 }
             }
