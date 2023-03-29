@@ -28,6 +28,8 @@
 		DB51CDCB29D1DB5C0068F5E2 /* DataTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */; };
 		DB51CDCE29D2AAE30068F5E2 /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = DB51CDCD29D2AAE30068F5E2 /* CodeEditor */; };
 		DB51CDD029D3368B0068F5E2 /* RustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCF29D3368B0068F5E2 /* RustView.swift */; };
+		DB8B893329D482F100AEE075 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8B893229D482F100AEE075 /* Box.swift */; };
+		DB8B893529D484D700AEE075 /* BoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8B893429D484D700AEE075 /* BoxModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		DB51CDC629D1D8AA0068F5E2 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		DB51CDCA29D1DB5C0068F5E2 /* DataTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeView.swift; sourceTree = "<group>"; };
 		DB51CDCF29D3368B0068F5E2 /* RustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustView.swift; sourceTree = "<group>"; };
+		DB8B893229D482F100AEE075 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		DB8B893429D484D700AEE075 /* BoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51CDB329D1220B0068F5E2 /* ProgramLang.swift */,
+				DB8B893429D484D700AEE075 /* BoxModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51CDB629D126030068F5E2 /* Card.swift */,
+				DB8B893229D482F100AEE075 /* Box.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,10 +241,12 @@
 			files = (
 				DB51CDB229D11E210068F5E2 /* DesignPatternView.swift in Sources */,
 				DB51CDB729D126030068F5E2 /* Card.swift in Sources */,
+				DB8B893329D482F100AEE075 /* Box.swift in Sources */,
 				DB51CDAA29D11CD90068F5E2 /* HomeView.swift in Sources */,
 				DB51CD9C29D11C400068F5E2 /* ContentView.swift in Sources */,
 				DB51CDC229D155460068F5E2 /* JavaView.swift in Sources */,
 				DB51CDBE29D154EC0068F5E2 /* C#View.swift in Sources */,
+				DB8B893529D484D700AEE075 /* BoxModel.swift in Sources */,
 				DB51CDCB29D1DB5C0068F5E2 /* DataTypeView.swift in Sources */,
 				DB51CDC529D155660068F5E2 /* JavascriptView.swift in Sources */,
 				DB51CDAC29D11CFE0068F5E2 /* TopBarView.swift in Sources */,

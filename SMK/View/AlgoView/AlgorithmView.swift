@@ -107,8 +107,6 @@ struct ArrayView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("Array")
-                                .resizable()
                             Text("""
                                  컴퓨터 과학에서 배열은 번호(인덱스)와 번호에 대응하는 테이터들로 이루어진 자료 구조를 나타냅니다.
                                  일반적으로 배열에는 같은 종류의 데이터들이 순차적으로 저장되어, 값의 번호가 곧 배열의 시작점으로부터 값이 저장되어 있는 상대적인 위치가 됩니다.
@@ -148,9 +146,10 @@ struct StackView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("Stack")
-                                .resizable()
-                                .frame(width: 300, height: 300)
+                            Box(boxItem: boxmodel[16])
+//                            Image("Stack")
+//                                .resizable()
+//                                .frame(width: 300, height: 300)
                             Text("""
                                  스택은 제한적으로 접근할 수 있는 나열 구조입니다. Last In-First Out의 후입선출의 특성을 가지고 있습니다.
                                  입력연산은 푸시(Push), 출력연산은 팝(Pop)이라고 합니다. 조회연산은 피크(Peek)라고 하는데, 탑 포인터가 가리키는 데이터를 조회만 할뿐 탑의 순번은 변화시키지 않습니다.
@@ -174,9 +173,7 @@ struct QueueView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("Queue")
-                                .resizable()
-                                .frame(width: 300, height: 300)
+                            Box(boxItem: boxmodel[17])
                             Text("""
                                  First In-First Out 선입선출의 특성을 가지고 있습니다. 영 단어로 Queue는 '일렬로 늘어선 사람들로 이루어진 줄'을 말하기도 합니다. 먼저 줄을 선 사람이 먼저 나갈 수 있는 상황을 연상하면 됩니다.
                                  
@@ -229,18 +226,16 @@ struct HashView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("Hash")
-                                .resizable()
-                                
-                            Text("""
-                                 해시 함수(hash function) 또는 해시 알고리즘(hash algorithm)은 임의의 길이의 데이터를 고정된 길이의 데이터로 매핑하는 함수입니다. 해시 함수에 의해 얻어지는 값은 해시 값, 해시 코드, 해시 체크섬 또는 간단하게 해시라고 한다. 그 용도 중 하나는 해시 테이블이라는 자료구조에 사용되며, 매우 빠른 데이터 검색을 위한 컴퓨터 소프트웨어에 널리 사용된다. 해시 함수는 큰 파일에서 중복되는 레코드를 찾을 수 있기 때문에 데이터베이스 검색이나 테이블 검색의 속도를 가속할 수 있습니다.
-                                 
-                                 해시는 보안 분야에서도 널리 사용됩니다. 원래의 텍스트를 복호화할 수 없도록 하고 원문과 해시값 사이에 선형적 관계가 없다는 특성을 지니고 있기 때문입니다. 해시 함수의 결과물은 고정된 길이의 숫자이므로 원래의 정보는 손실됩니다.
-                                 
-                                 이러한 특성 때문에 하나의 데이터는 하나의 해시값만 가지게되고, 하나의 해시값을 만들어낼 수 있는 데이터는 매우 많게 됩니다.
-                                 비밀번호, 전자서명, 전자투표 등 민감한 사항의 무결성을 검증하는데 사용됩니다.
-                                 """)
-                            .padding()
+                            Box(boxItem: boxmodel[14])
+                                    
+                                Text("""
+                                     해시 함수(hash function) 또는 해시 알고리즘(hash algorithm)은 임의의 길이의 데이터를 고정된 길이의 데이터로 매핑하는 함수입니다. 해시 함수에 의해 얻어지는 값은 해시 값, 해시 코드, 해시 체크섬 또는 간단하게 해시라고 한다. 그 용도 중 하나는 해시 테이블이라는 자료구조에 사용되며, 매우 빠른 데이터 검색을 위한 컴퓨터 소프트웨어에 널리 사용된다. 해시 함수는 큰 파일에서 중복되는 레코드를 찾을 수 있기 때문에 데이터베이스 검색이나 테이블 검색의 속도를 가속할 수 있습니다.
+                                     
+                                     해시는 보안 분야에서도 널리 사용됩니다. 원래의 텍스트를 복호화할 수 없도록 하고 원문과 해시값 사이에 선형적 관계가 없다는 특성을 지니고 있기 때문입니다. 해시 함수의 결과물은 고정된 길이의 숫자이므로 원래의 정보는 손실됩니다.
+                                     
+                                     이러한 특성 때문에 하나의 데이터는 하나의 해시값만 가지게되고, 하나의 해시값을 만들어낼 수 있는 데이터는 매우 많게 됩니다.
+                                     비밀번호, 전자서명, 전자투표 등 민감한 사항의 무결성을 검증하는데 사용됩니다.
+                                     """)                            .padding()
         //                    .offset(y: -200)
                 }
             }
@@ -254,8 +249,7 @@ struct HashTableView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("HashTable")
-                                .resizable()
+                            Box(boxItem: boxmodel[18])
                             Text("""
                                  해시 테이블, 해시 맵, 해시 표는 컴퓨팅에서 키를 값에 매핑할 수 있는 자료 구조입니다.
                                  해시 테이블은 해시 함수를 사용해서 Index(색인)를 Bucket이나 Slot의 배열로 계산합니다.
@@ -276,9 +270,7 @@ struct GraphView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("그래프")
-                                .resizable()
-                                .frame(width: 200, height: 200)
+                            Box(boxItem: boxmodel[0])
                             Text("""
                                  그래프는 vertex와 edge로 구성된 한정된 자료구조를 의미합니다. vertex는 정점, edge는 정점과 정점을 연결하는 간선입니다.
                                  
@@ -304,9 +296,7 @@ struct TreeView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("이진트리")
-                                .resizable()
-                                .frame(width: 200, height: 200)
+                            Box(boxItem: boxmodel[6])
                             Text("""
                                  트리 구조란 그래프의 일종입니다. 한 노드에서 시작해서 다른 정점들을 순회하여 자기 자신에게 돌아오는 순환이 없는 연결 그래프입니다.
                                  
@@ -331,9 +321,10 @@ struct RedBlackTree: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("레드블랙트리")
-                                .resizable()
-                                .frame(width: 380, height: 200)
+                            Box(boxItem: boxmodel[19])
+//                            Image("레드블랙트리")
+//                                .resizable()
+//                                .frame(width: 380, height: 200)
                             Text("""
                                  레드-블랙 트리는 자가 균형 이진 탐색 트리입니다. 자가 균형 이진 탐색 트리는 삽입과 삭제가 일어나는 경우에 자동으로 그 높이를 작게 유지하는 이진 탐색 트리입니다. 트리에 n개의 원소가 있을 때 O(log n)의 시간복잡도로 삽입, 삭제, 검색을 실행할 수 있습니다.
                                  
@@ -362,9 +353,7 @@ struct HeapView: View {
                 NavigationStack {
                     VStack {
                         ScrollView {
-                            Image("Heap")
-                                .resizable()
-                                .frame(width: 350, height: 350)
+                            Box(boxItem: boxmodel[15])
                             Text("""
                                  힙(Heap)은 최댓값 및 최솟값을 찾아내는 연산을 빠르게 하기 위해 고안된 완전 이진 트리를 기본으로 한 자료구조입니다. 힙은 다음과 같은 속성을 만족합니다.
                                  

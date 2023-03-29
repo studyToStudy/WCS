@@ -65,9 +65,7 @@ struct RecursionView: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("재귀1")
-                        .resizable()
-                        .frame(width: 300, height: 300)
+                    Box(boxItem: boxmodel[7])
                     Text("""
                          재귀는 정의 단계에서 자신을 재참조하는 것을 말합니다.
                          
@@ -86,8 +84,9 @@ struct FibonacciView: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("토끼")
-                        .resizable()
+                    Box(boxItem: boxmodel[9])
+//                    Image("토끼")
+//                        .resizable()
                     Text("""
                          n 번째 달의 토끼의 수는?
                          
@@ -111,9 +110,7 @@ struct SelectSort: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("선택정렬")
-                        .resizable()
-                        .frame(width: 350, height: 250)
+                    Box(boxItem: boxmodel[5])
                         Text("""
                              선택 정렬은 제자리 정렬 알고리즘의 하나입니다. 순서도는 아래와 같습니다.
                              
@@ -135,9 +132,7 @@ struct BubbleSort: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("버블")
-                        .resizable()
-                        .frame(width: 350, height: 250)
+                    Box(boxItem: boxmodel[2])
                         Text("""
                              버블 정렬은 기본적으로 두 수(a, b)를 선택한 뒤, 만약 그 두 수가 정렬되었다면 놔두고 아니라면 두 수를 바꾸는 방식으로 진행됩니다.
                              
@@ -157,9 +152,7 @@ struct InsertSort: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("삽입")
-                        .resizable()
-                        .frame(width: 400, height: 350)
+                    Box(boxItem: boxmodel[4])
                         Text("""
                              삽입 정렬은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성합니다.
                              
@@ -181,9 +174,7 @@ struct MergeSort: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("병합")
-                        .resizable()
-                        .frame(width: 400, height: 350)
+                    Box(boxItem: boxmodel[3])
                         Text("""
                              병합 정렬 또는 합병 정렬의 개발자는 존 폰 노이만입니다. 원소 개수가 1 또는 0이 될 때까지 두 부분으로 쪼개고 쪼개서 자른 순서의 역순으로 크기를 비교해 병합해 나갑니다.
                              
@@ -210,9 +201,7 @@ struct QuickSort: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("퀵")
-                        .resizable()
-                        .frame(width: 400, height: 350)
+                    Box(boxItem: boxmodel[8])
                         Text("""
                              찰스 앤터니 리처드 호어가 개발한 정렬 알고리즘입니다. 다른 원소와의 비교만으로 정렬을 수행하는 비교 정렬에 속합니다.
                              
@@ -250,9 +239,7 @@ struct DFSView: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("DFS")
-                        .resizable()
-                        .frame(width: 250, height: 250)
+                    Box(boxItem: boxmodel[13])
                         Text("""
                              Depth First Search, DFS(깊이 우선 탐색)라고 합니다.
                              
@@ -277,9 +264,7 @@ struct BFSView: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("BFS")
-                        .resizable()
-                        .frame(width: 300, height: 200)
+                    Box(boxItem: boxmodel[12])
                         Text("""
                              Breadth First Search, BFS(너비 우선 탐색)라고 합니다.
                              
@@ -301,9 +286,7 @@ struct DaicstraAlgo: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Image("데이크스트라")
-                        .resizable()
-                        .frame(width: 300, height: 200)
+                    Box(boxItem: boxmodel[1])
                         Text("""
                              데이크스트라 알고리즘은 최단 경로를 찾는 알고리즘입니다.
                              
