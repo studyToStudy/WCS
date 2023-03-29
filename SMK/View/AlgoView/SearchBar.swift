@@ -1,11 +1,9 @@
 //
-//  DesignPatternView.swift
+//  SearchBar.swift
 //  SMK
 //
-//  Created by 이정후 on 2023/03/27.
+//  Created by 이정후 on 2023/03/29.
 //
-
-import SwiftUI
 
 import SwiftUI
 

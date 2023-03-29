@@ -24,7 +24,7 @@ struct testView : View {
         case .dataStructure:
             DataStructureView()
         case .design:
-            DesignPatternView()
+            SearchViewSe()
         }
     }
 }

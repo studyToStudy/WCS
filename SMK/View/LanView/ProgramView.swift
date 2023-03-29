@@ -26,6 +26,12 @@ struct ProgramView: View {
                 NavigationLink("RESTful API란") {
                     RestFulApiView()
                 }
+                NavigationLink("Docker") {
+                    DockerKub()
+                }
+                NavigationLink("Kubernetes") {
+                    Kubernetes()
+                }
             }
             .navigationTitle("프로그래밍 공통")
         }
@@ -168,9 +174,62 @@ struct RestFulApiView : View {
         }
     }
 }
+
+struct DockerKub : View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    VStack {
+                        Text("""
+                            Docker(도커)
+                            
+                            도커는 컨테이너 기반의 오픈소스 가상화 플랫폼입니다. 도커의 특징은 아래와 같습니다.
+                            
+                            1. 가상머신에 비해 가벼우며, VM을 포함하여 한 대의 서버에 여러 개의 서비스를 구동하기 좋습니다.
+                            2. 보안상 취약점이 발견되더라도, 원래의 서버에 영향을 미치기가 쉽지 않은 격리된 구조입니다.
+                            3. 가상머신들과 달리, 기존 리눅스 자원을 그대로 활용할 수 있어 여러 서비스들을 한 서버에서 가동하기 용이합니다.
+                            4. 다른 컨테이너 환경을 쉽고 그대로 재현할 수 있는 이미지를 제공합니다.
+                            """)
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(1)
+                        .padding()
+                    }
+                }
+            }
+            .navigationTitle("Docker")
+        }
+    }
+}
+
+struct Kubernetes : View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    VStack {
+                        Text("""
+                            Kubernetes(쿠버네티스)
+                            
+                            컨테이너화된 애플리케이션의 자동 배포, 스케일링 등을 제공하는 관리시스템으로 오픈 소스 기반입니다.
+                            구글에 의해 설계되었고 리눅스 재단에서 관리하고 있습니다.
+                            
+                            클러스트의 호스트 간의 애플리케이션 컨테이너의 배치, 스케일링, 운영을 자동화 하기 위한 플랫폼을 제공합니다.
+                            """)
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(1)
+                        .padding()
+                    }
+                }
+            }
+            .navigationTitle("쿠버네티스")
+        }
+    }
+}
         
         struct ProgramView_Previews: PreviewProvider {
             static var previews: some View {
-                RestFulApiView()
+//                RestFulApiView()
+                ProgramView()
             }
         }
