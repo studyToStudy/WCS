@@ -20,6 +20,9 @@ struct ProgramView: View {
                 NavigationLink("객체지향 프로그래밍") {
                     OopView()
                 }
+                NavigationLink("객체지향 프로그래밍의 특징") {
+                    OopViewDetailView()
+                }
                 NavigationLink("API란") {
                     ApiView()
                 }
@@ -31,6 +34,12 @@ struct ProgramView: View {
                 }
                 NavigationLink("Kubernetes") {
                     Kubernetes()
+                }
+                NavigationLink("함수형 프로그래밍") {
+                    FunctionalProgramming()
+                }
+                NavigationLink("오버플로") {
+                    OverFlow()
                 }
             }
             .navigationTitle("프로그래밍 공통")
@@ -86,7 +95,7 @@ struct OopView : View {
                     }
                 }
             }
-            .navigationTitle("변수와 상수")
+            .navigationTitle("객체지향 프로그래밍")
         }
     }
 }
@@ -190,6 +199,9 @@ struct DockerKub : View {
                             2. 보안상 취약점이 발견되더라도, 원래의 서버에 영향을 미치기가 쉽지 않은 격리된 구조입니다.
                             3. 가상머신들과 달리, 기존 리눅스 자원을 그대로 활용할 수 있어 여러 서비스들을 한 서버에서 가동하기 용이합니다.
                             4. 다른 컨테이너 환경을 쉽고 그대로 재현할 수 있는 이미지를 제공합니다.
+                            
+                            컨테이너 개발은 VM과 유사하지만 격리 속성을 완화시켜 애플리케이션 간에 운영체제(OS)를 공유합니다.
+                            VM과 마찬가지로 컨테이너에는 자체 파일 시스템, CPU 점유율, 메모리, 프로세스 공간 등이 있습니다. 기본 인프라와의 종속성을 끊었기 떄문에, 클라우드나 OS 배포본에 모두 이식할 수 있습니다.
                             """)
                         .multilineTextAlignment(.leading)
                         .lineSpacing(1)
@@ -211,10 +223,28 @@ struct Kubernetes : View {
                         Text("""
                             Kubernetes(쿠버네티스)
                             
-                            컨테이너화된 애플리케이션의 자동 배포, 스케일링 등을 제공하는 관리시스템으로 오픈 소스 기반입니다.
+                            컨테이너화된 애플리케이션의 자동 배포, 스케일링 등을 제공하는 관리시스템으로 오픈 소스 컨테이너 플랫폼입니다.
                             구글에 의해 설계되었고 리눅스 재단에서 관리하고 있습니다.
                             
-                            클러스트의 호스트 간의 애플리케이션 컨테이너의 배치, 스케일링, 운영을 자동화 하기 위한 플랫폼을 제공합니다.
+                            쿠퍼네티스는 다음과 같은 기능을 제공합니다.
+                            
+                            1. 서비스 디스커버리와 로드 밸런싱:
+                            쿠버네티스는 DNS 이름을 사용하거나 자체 IP 주소를 사용하여 컨테이너를 노출할 수 있습니다. 컨테이너에 대한 트래픽이 많으면, 쿠버네티스는 네트워크 트래픽을 로드밸런싱하고 배포하여 배포가 안정적으로 이루어질 수 있습니다.
+                            
+                            2. 스토리지 오케스트레이션:
+                            쿠버네티스를 사용하면 로컬 저장소, 공용 클라우드 공급자 등과 같이 원하는 저장소 시스템을 자동으로 탑재 할 수 있습니다.
+                            
+                            3. 자동화된 롤아웃과 롤백:
+                            쿠버네티스를 사용하여 배포된 컨테이너의 원하는 상태를 서술할 수 있으며 현재 상태를 원하는 상태로 설정한 속도에 따라 변경할 수 있습니다. 예를 들어 쿠버네티스를 자동화해서 배포용 새 컨테이너를 만들고, 기존 컨테이너를 제거하고, 모든 리소스를 새 컨테이너에 적용할 수 있습니다.
+                            
+                            4. 자동화된 빈 패킹(bin packing):
+                            컨테이너화된 작업을 실행하는데 사용할 수 있는 쿠버네티스 클러스터 노드를 제공한다. 각 컨테이너가 필요로 하는 CPU와 메모리(RAM)를 쿠버네티스에게 지시한다. 쿠버네티스는 컨테이너를 노드에 맞추어서 리소스를 가장 잘 사용할 수 있도록 해줍니다.
+                            
+                            5. 자동화된 복구(self-healing):
+                            쿠버네티스는 실패한 컨테이너를 다시 시작하고, 컨테이너를 교체하며, '사용자 정의 상태 검사'에 응답하지 않는 컨테이너를 죽이고, 서비스 준비가 끝날 때까지 그러한 과정을 클라이언트에 보여주지 않습니다.
+                            
+                            6. 시크릿과 구성 관리:
+                            쿠버네티스를 사용하면 암호, OAuth 토큰 및 SSH 키와 같은 중요한 정보를 저장하고 관리 할 수 있다. 컨테이너 이미지를 재구성하지 않고 스택 구성에 시크릿을 노출하지 않고도 시크릿 및 애플리케이션 구성을 배포 및 업데이트 할 수 있습니다.
                             """)
                         .multilineTextAlignment(.leading)
                         .lineSpacing(1)
@@ -226,7 +256,52 @@ struct Kubernetes : View {
         }
     }
 }
-        
+
+struct FunctionalProgramming : View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    VStack {
+                        Text("""
+                            함수형 프로그래밍은 자료 처리를 수학적 함수의 계산으로 취급하고 상태와 가변 데이터를 멀리하는 프로그래밍 패러다임의 하나입니다.
+                            함수형 프로그래밍은 이름에서 알 수 있듯 함수의 응용을 강조합니다. 계산 가능성, 결정문제, 함수정의 함수 응용과 재귀를 연구하기 위해 개발된 형식체계인 람다 대수에 근간을 두고 있습니다.
+                            """)
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(1)
+                        .padding()
+                    }
+                }
+            }
+            .navigationTitle("함수형 프로그래밍")
+        }
+    }
+}
+
+struct OverFlow : View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    VStack {
+                        Text("""
+                            컴퓨터의 정수 연산의 계산 결과가 그 허용 범위를 초과할 때 발생하는 오류입니다.
+                            
+                            오버플로의 예로는 스택 오버플로가 있습니다.(Stack Overflow), 함수는 변수나 데이터 저장을 위해 스택이라는 메모리 공간을 만드는데,
+                            이 함수가 재귀적으로 계속 실행되면 스택이 점점 생겨나고, 어느 순간 메모리가 부족한 순간에 생기는 오류입니다.
+                            """)
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(1)
+                        .padding()
+                    }
+                }
+            }
+            .navigationTitle("오버플로")
+        }
+    }
+}
+
+        // Box(boxItem: boxmodel[20])
         struct ProgramView_Previews: PreviewProvider {
             static var previews: some View {
 //                RestFulApiView()

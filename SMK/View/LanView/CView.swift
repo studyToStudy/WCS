@@ -27,6 +27,12 @@ struct CView: View {
                 NavigationLink("포인터") {
                     PointerView()
                 }
+                NavigationLink("저장수명") {
+                    StorageDuration()
+                }
+                NavigationLink("저수준 언어로서의 C") {
+                    LowAndHigh()
+                }
             }
             .navigationTitle("C")
         }
@@ -190,6 +196,51 @@ struct PointerView: View {
     }
 }
 
+struct StorageDuration: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Text("""
+                         C언어에서는 스택과 힙의 개념을 사용하지 않고, 저장수명(storage duration)이라는 개념을 사용합니다.
+                         즉 C언어의 추상기계는 스택과 힙을 모르며, 이에 의지하여 동작하지 않습니다.
+                         
+                         저장수명은 크게 static, thread, automatic, allocated 네 종류가 있습니다.
+                         static은 프로그램의 시작부터 끝 부분까지 존재하고, thread는 스레드 별로 분리하여 존재, automatic은 해당 블록이 시작할 때 생성되어 끝날 때 소멸되고, allocated는 메모리 할당 함수들에 의해 생성되고 free() 함수로 해제될 때까지 존재합니다.
+                         """)
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(1)
+                    .padding()
+                    
+                }
+            }
+            .navigationTitle("저장수명")
+        }
+    }
+}
+
+struct LowAndHigh: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Text("""
+                         C언어는 저수준 언어로서의 C
+                         
+                         정수형 모델, 비트 연산, 공용체, 포인터, 형변환 규칙 등 다양한 부분에서 기계에 대한 직접적인 접근을 의도하고 있습니다.
+                         C언어는 어셈블리어와 비교할만한 효율을 가지도록 설계되었습니다. C언어가 주로 쓰이는 곳이 저수준 제어가 필요한 분야이다 보니, 많은 C언어 구현체들이 인라인 어셈블러를 통해 어셈블리 코드를 코드안에 직접 집어넣을 수 있는 확장 기능을 지원합니다.
+
+                         """)
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(1)
+                    .padding()
+                    
+                }
+            }
+            .navigationTitle("저수준 언어로서의 C")
+        }
+    }
+}
 
 struct CView_Previews: PreviewProvider {
     static var previews: some View {

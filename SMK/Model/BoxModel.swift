@@ -35,4 +35,5 @@ var boxmodel = [
     BoxModel(image: "Queue", title: "Queue"),
     BoxModel(image: "HashTable", title: "HashTable"),
     BoxModel(image: "레드블랙트리", title: "레드블랙트리"),
+    BoxModel(image: "시간복잡도", title: "시간복잡도"),
 ]
