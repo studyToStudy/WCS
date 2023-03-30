@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct DataStructureView: View {
+struct AlgoView: View {
     var body: some View {
         NavigationStack {
             List {
@@ -315,6 +315,6 @@ struct DaicstraAlgo: View {
 
 struct DataStructureView_Previews: PreviewProvider {
     static var previews: some View {
-        DataStructureView()
+        AlgoView()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AlgorithmView: View {
+struct DataSt: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
@@ -379,6 +379,6 @@ struct HeapView: View {
 
 struct AlgorithmView_Previews: PreviewProvider {
     static var previews: some View {
-        AlgorithmView()
+        DataSt()
     }
 }

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 enum topBar:String, CaseIterable {
     case algorithm = "알고리즘"
     case dataStructure = "자료구조"
@@ -20,9 +18,9 @@ struct testView : View {
     var body: some View {
         switch ex {
         case .algorithm:
-            AlgorithmView()
+            AlgoView()
         case .dataStructure:
-            DataStructureView()
+            DataSt()
         case .design:
             SearchViewSe()
         }
@@ -33,7 +31,7 @@ struct TopBarView: View {
     
     @State private var selectedPicker: topBar = .algorithm
     @Namespace private var animation
-    
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         VStack {
             animate()
@@ -49,7 +47,7 @@ struct TopBarView: View {
                     Text(items.rawValue)
                         .font(.title3)
                         .frame(maxWidth: .infinity, maxHeight: 50)
-                        .foregroundColor(selectedPicker == items ? .black : .gray)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                     
                     if selectedPicker == items {
                         Capsule()
