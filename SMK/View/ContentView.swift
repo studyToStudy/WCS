@@ -10,24 +10,27 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selection = 0
+    @State var isLoading: Bool = true
     
     var body: some View {
-        TabView(selection: $selection) {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "cpu.fill")
-                        .foregroundColor(.red)
-                    Text("Lang")
-                        .tag(1)
-                }
-            TopBarView()
-                .tabItem {
-                    Image(systemName: "2.square.fill")
-                    Text("Algorythm")
-                        .tag(0)
-                }
+        ZStack {
+            TabView(selection: $selection) {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "cpu.fill")
+                            .foregroundColor(.red)
+                        Text("Lang")
+                            .tag(1)
+                    }
+                TopBarView()
+                    .tabItem {
+                        Image(systemName: "2.square.fill")
+                        Text("Algorythm")
+                            .tag(0)
+                    }
+            }
+            .toolbarColorScheme(.dark, for: .tabBar)
         }
-        .toolbarColorScheme(.dark, for: .tabBar)
     }
 }
 

@@ -10,7 +10,6 @@ import SwiftUI
 enum topBar:String, CaseIterable {
     case algorithm = "알고리즘"
     case dataStructure = "자료구조"
-    case design = "디자인패턴"
 }
 
 struct testView : View {
@@ -21,8 +20,6 @@ struct testView : View {
             AlgoView()
         case .dataStructure:
             DataSt()
-        case .design:
-            SearchViewSe()
         }
     }
 }

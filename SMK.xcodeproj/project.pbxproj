@@ -15,7 +15,6 @@
 		DB51CDAC29D11CFE0068F5E2 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDAB29D11CFE0068F5E2 /* TopBarView.swift */; };
 		DB51CDAE29D11D280068F5E2 /* DataSt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDAD29D11D280068F5E2 /* DataSt.swift */; };
 		DB51CDB029D11DB20068F5E2 /* AlgoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDAF29D11DB20068F5E2 /* AlgoView.swift */; };
-		DB51CDB229D11E210068F5E2 /* DesignPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */; };
 		DB51CDB429D1220B0068F5E2 /* ProgramLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB329D1220B0068F5E2 /* ProgramLang.swift */; };
 		DB51CDB729D126030068F5E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB629D126030068F5E2 /* Card.swift */; };
 		DB51CDB929D148D80068F5E2 /* CView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDB829D148D80068F5E2 /* CView.swift */; };
@@ -30,6 +29,7 @@
 		DB51CDD029D3368B0068F5E2 /* RustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51CDCF29D3368B0068F5E2 /* RustView.swift */; };
 		DB8B893329D482F100AEE075 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8B893229D482F100AEE075 /* Box.swift */; };
 		DB8B893529D484D700AEE075 /* BoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8B893429D484D700AEE075 /* BoxModel.swift */; };
+		DB8B893D29D555DD00AEE075 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DB8B893C29D555DD00AEE075 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		DB51CDAB29D11CFE0068F5E2 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		DB51CDAD29D11D280068F5E2 /* DataSt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSt.swift; sourceTree = "<group>"; };
 		DB51CDAF29D11DB20068F5E2 /* AlgoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoView.swift; sourceTree = "<group>"; };
-		DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternView.swift; sourceTree = "<group>"; };
 		DB51CDB329D1220B0068F5E2 /* ProgramLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramLang.swift; sourceTree = "<group>"; };
 		DB51CDB629D126030068F5E2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DB51CDB829D148D80068F5E2 /* CView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CView.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB51CDCE29D2AAE30068F5E2 /* CodeEditor in Frameworks */,
+				DB8B893D29D555DD00AEE075 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +156,6 @@
 		DB51CDD129D345FA0068F5E2 /* AlgoView */ = {
 			isa = PBXGroup;
 			children = (
-				DB51CDB129D11E210068F5E2 /* DesignPatternView.swift */,
 				DB51CDAD29D11D280068F5E2 /* DataSt.swift */,
 				DB51CDAF29D11DB20068F5E2 /* AlgoView.swift */,
 			);
@@ -181,6 +180,7 @@
 			name = SMK;
 			packageProductDependencies = (
 				DB51CDCD29D2AAE30068F5E2 /* CodeEditor */,
+				DB8B893C29D555DD00AEE075 /* Alamofire */,
 			);
 			productName = SMK;
 			productReference = DB51CD9629D11C400068F5E2 /* SMK.app */;
@@ -212,6 +212,7 @@
 			mainGroup = DB51CD8D29D11C400068F5E2;
 			packageReferences = (
 				DB51CDCC29D2AAE30068F5E2 /* XCRemoteSwiftPackageReference "CodeEditor" */,
+				DB8B893B29D555DD00AEE075 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DB51CD9729D11C400068F5E2 /* Products */;
 			projectDirPath = "";
@@ -239,7 +240,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB51CDB229D11E210068F5E2 /* DesignPatternView.swift in Sources */,
 				DB51CDB729D126030068F5E2 /* Card.swift in Sources */,
 				DB8B893329D482F100AEE075 /* Box.swift in Sources */,
 				DB51CDAA29D11CD90068F5E2 /* HomeView.swift in Sources */,
@@ -384,15 +384,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SMK/Preview Content\"";
 				DEVELOPMENT_TEAM = 477F64NLSP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SMK/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "코딩의정석";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,15 +416,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SMK/Preview Content\"";
 				DEVELOPMENT_TEAM = 477F64NLSP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SMK/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "코딩의정석";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,6 +475,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		DB8B893B29D555DD00AEE075 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -476,6 +490,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB51CDCC29D2AAE30068F5E2 /* XCRemoteSwiftPackageReference "CodeEditor" */;
 			productName = CodeEditor;
+		};
+		DB8B893C29D555DD00AEE075 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB8B893B29D555DD00AEE075 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

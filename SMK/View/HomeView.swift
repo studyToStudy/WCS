@@ -72,7 +72,7 @@ struct HomeView: View {
 
                 }
             }
-            .navigationTitle("세상의 모든 코딩지식")
+            .navigationTitle("코딩의 정석")
         }
     }
 }
