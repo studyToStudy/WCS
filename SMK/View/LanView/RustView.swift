@@ -21,6 +21,9 @@ struct RustView: View {
                 NavigationLink("RUST의 특징"){
                     ImpactRustView()
                 }
+                NavigationLink("Hello, Cargo!"){
+                    HelloCargo()
+                }
                 NavigationLink("소유권과 수명"){
                     PointRustView()
                 }
@@ -175,6 +178,33 @@ struct PointRustView: View {
                 }
             }
             .navigationTitle("소유권과 수명")
+        }
+    }
+}
+
+struct HelloCargo: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Text("""
+                         Cargo(카고)는 러스트의 빌드 시스템 및 패키지 매니저입니다. 대부분의 러스트 개발자들은 이 도구를 이용하여 러스트 프로젝트를 관리하는데
+                         Cargo를 사용하여 프로젝트를 생성하고,라이브러리를 다운로드해주고, 빌드해주는 많은 작업들을 도와주기 떄문입니다.
+                         
+                         Cargo는 Rust가 다양한 종속성을 선언하고 반복 가능한 빌드를 얻을 수 있도록 다음의 작업을 수행합니다.
+                         
+                         1. 패키지 정보의 다양한 비트가 포함된 두 개의 메타데이터 파일 확보
+                         2. 패키지 종속성을 가져오고 빌드
+                         3. rustc 패키지를 빌드하기 위해, 올바른 매개 변수가 있는 다른 빌드를 호출
+                         4. Rust 패키지 작업을 더 쉽게 하기 위한 규칙 소개
+                         """)
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(1)
+                    .padding()
+//                    .offset(y: -150)
+                }
+            }
+            .navigationTitle("Hello, Cargo!")
         }
     }
 }
