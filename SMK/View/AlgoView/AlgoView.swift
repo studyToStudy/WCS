@@ -44,12 +44,18 @@ struct AlgoView: View {
                     NavigationLink("탐색") {
                         SearchView()
                     }
+                    NavigationLink("이진 탐색") {
+                        BinarySearch()
+                    }
                     NavigationLink("DFS") {
                         DFSView()
                     }
                     NavigationLink("BFS") {
                         BFSView()
                     }
+                }
+                NavigationLink("그리디") {
+                    Greedy()
                 }
                 NavigationLink("데이크스트라 알고리즘") {
                     DaicstraAlgo()
@@ -281,6 +287,27 @@ struct BFSView: View {
     }
 }
 
+struct BinarySearch: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Box(boxItem: boxmodel[21])
+                        Text("""
+                             이진 탐색(Binary Search)는 오름차순으로 정렬된 리스트에서 특정한 값을 찾는 알고리즘입니다.
+                             
+                             처음 중간 임의의 값을 선택하여, 그 값과 찾고자 하는 값의 크고 작음을 비교하는 방식을 채택합니다. 처음 선택한 중앙값이 만약 찾는 값보다 크면 그 값은 새로운 최댓값이 되며, 작으면 그 값은 새로운 최솟값이 됩니다.
+                             
+                             
+                             """)
+                        .padding()
+                    }
+                }
+            .navigationTitle("이진 탐색")
+        }
+    }
+}
+
 struct DaicstraAlgo: View {
     var body: some View {
         NavigationStack {
@@ -313,7 +340,29 @@ struct DaicstraAlgo: View {
     }
 }
 
-struct DataStructureView_Previews: PreviewProvider {
+struct Greedy: View {
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    Box(boxItem: boxmodel[1])
+                        Text("""
+                             그리디(Greedy) 알고리즘은 "지금 가장 최적인 답"을 선택하여 결과를 도출하는 알고리즘입니다.
+                             
+                             탐욕 선택 속성과 최적 부분 구조 조건이라는 두 가지 조건이 만족될 경우 그리디 알고리즘이 잘 작동합니다.
+                             탐욕 선택 속성은 앞의 선택이 이후의 선택에 영향을 주지 않는다는 것, 최적 부분 구조는 문제에 대한 최적값이 부분문제에 대해서도 최적값이라는 것입니다.
+                             
+                             
+                             """)
+                        .padding()
+                    }
+                }
+            .navigationTitle("Greedy")
+        }
+    }
+}
+
+struct AlgoView_Previews: PreviewProvider {
     static var previews: some View {
         AlgoView()
     }

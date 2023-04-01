@@ -36,4 +36,5 @@ var boxmodel = [
     BoxModel(image: "HashTable", title: "HashTable"),
     BoxModel(image: "레드블랙트리", title: "레드블랙트리"),
     BoxModel(image: "시간복잡도", title: "시간복잡도"),
+    BoxModel(image: "이진탐색", title: "이진탐색"),
 ]

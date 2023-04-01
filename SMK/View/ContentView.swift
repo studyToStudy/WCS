@@ -24,7 +24,7 @@ struct ContentView: View {
                     }
                 TopBarView()
                     .tabItem {
-                        Image(systemName: "2.square.fill")
+                        Image(systemName: "function")
                         Text("Algorythm")
                             .tag(0)
                     }

@@ -377,7 +377,7 @@ struct HeapView: View {
 }
 
 
-struct AlgorithmView_Previews: PreviewProvider {
+struct DataSt_Previews: PreviewProvider {
     static var previews: some View {
         DataSt()
     }
